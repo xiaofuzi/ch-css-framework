@@ -1,0 +1,374 @@
+/*
+固定布局网格系统,12栏布局，参照960 Grid System;
+中文排版优先；
+网格坐标说明：(x,y),x表示横坐标，y表示纵坐标；
+如：(1,2)表示第一行第二列的单元格；
+
+CSS预编译器使用，预定义变量说明
+@body-width: 960px;                设置body的最小宽度
+@container-width: 960px;　　容器宽度设置
+@margin-length: 10px;   　　  外边距    
+*/
+@body-width: 960px;           
+@container-width: 960px;
+@margin-length: 10px;   
+@grid-width: 60;
+/*
+设置body的宽度
+*/
+body{
+	min-width: @body-width;
+}
+
+/*
+网格容器，container
+*/
+.ch-container{
+	margin-left:  auto;
+	margin-right:  auto;
+	width: @container-width;
+}
+
+/*
+网格全局属性设置
+*/
+[class*="ch-grid-"]{
+      display: inline-block;
+      float: left;
+      margin-left: @margin-length;
+      margin-right: @margin-length;
+}
+[class*="push-"]{
+      position: relative;
+}
+[class*="pull-"]{
+      position: relative;
+}
+[class*="center-"]{
+      position: relative;
+}
+
+
+.ch-grid-first {
+  margin-left: 0;
+}
+
+.ch-grid-last {
+  margin-right: 0;
+}
+
+/*
+网格宽度设置,宽度计算公式：
+网格宽度加上外边距的总和为960px,这里外边距默认是10；
+@grid-width = (@container/12) - (2*@margin-length)
+*/
+
+
+.ch-container .ch-grid-1{
+	width:60;
+}
+.ch-container .ch-grid-2{
+	width:140px;
+}
+.ch-container .ch-grid-3{
+	width:220px;
+}
+.ch-container .ch-grid-4{
+	width:300px;
+}
+.ch-container .ch-grid-5{
+	width:380px;
+}
+.ch-container .ch-grid-6{
+	width:460px;
+}
+.ch-container .ch-grid-7{
+	width:540px;
+}
+.ch-container .ch-grid-8{
+	width:620px;
+}
+.ch-container .ch-grid-9{
+	width:700px;
+}
+.ch-container .ch-grid-10{
+	width:780px;
+}
+.ch-container .ch-grid-11{
+	width:860px;
+}
+.ch-container .ch-grid-12{
+	width:940px;
+}
+
+/*
+内补白设置，padding-left,padding-right;
+补白计算时需要考虑单元格的外边距；
+prefix_num:左内补白;
+suffix_num:右内补白;
+*/
+
+.ch-container .prefix-1 {
+  padding-left: 80px;
+}
+
+.ch-container .prefix-2 {
+  padding-left: 160px;
+}
+
+.ch-container .prefix-3 {
+  padding-left: 240px;
+}
+
+.ch-container .prefix-4 {
+  padding-left: 320px;
+}
+
+.ch-container .prefix-5 {
+  padding-left: 400px;
+}
+
+.ch-container  .prefix-6 {
+  padding-left: 480px;
+}
+
+.ch-container  .prefix-7 {
+  padding-left: 560px;
+}
+
+.ch-container .prefix-8 {
+  padding-left: 640px;
+}
+
+.ch-container .prefix-9 {
+  padding-left: 720px;
+}
+
+.ch-container .prefix-10 {
+  padding-left: 800px;
+}
+
+.ch-container .prefix-11 {
+  padding-left: 880px;
+}
+
+
+.ch-container .suffix-1 {
+  padding-right: 80px;
+}
+
+.ch-container .suffix-2 {
+  padding-right: 160px;
+}
+
+.ch-container .suffix-3 {
+  padding-right: 240px;
+}
+
+.ch-container .suffix-4 {
+  padding-right: 320px;
+}
+
+.ch-container .suffix-5 {
+  padding-right: 400px;
+}
+
+.ch-container .suffix-6 {
+  padding-right: 480px;
+}
+
+.ch-container .suffix-7 {
+  padding-right: 560px;
+}
+
+.ch-container .suffix-8 {
+  padding-right: 640px;
+}
+
+.ch-container .suffix-9 {
+  padding-right: 720px;
+}
+
+.ch-container .suffix-10 {
+  padding-right: 800px;
+}
+
+.ch-container .suffix-11 {
+  padding-right: 880px;
+}
+
+/*
+列偏移
+push_num: 向右偏移;
+pull_num: 向左偏移;
+*/
+.ch-container .push-1 {
+  left: 80px;
+}
+
+.ch-container .push-2 {
+  left: 160px;
+}
+
+.ch-container .push-3 {
+  left: 240px;
+}
+
+.ch-container .push-4 {
+  left: 320px;
+}
+
+.ch-container .push-5 {
+  left: 400px;
+}
+
+.ch-container .push-6 {
+  left: 480px;
+}
+
+.ch-container .push-7 {
+  left: 560px;
+}
+
+.ch-container .push-8 {
+  left: 640px;
+}
+
+.ch-container .push-9 {
+  left: 720px;
+}
+
+.ch-container .push-10 {
+  left: 800px;
+}
+
+.ch-container .push-11 {
+  left: 880px;
+}
+
+
+.ch-container .pull-1 {
+  left: -80px;
+}
+
+.ch-container .pull-2 {
+  left: -160px;
+}
+
+.ch-container .pull-3 {
+  left: -240px;
+}
+
+.ch-container .pull-4 {
+  left: -320px;
+}
+
+.ch-container .pull-5 {
+  left: -400px;
+}
+
+.ch-container .pull-6 {
+  left: -480px;
+}
+
+.ch-container .pull-7 {
+  left: -560px;
+}
+
+.ch-container .pull-8 {
+  left: -640px;
+}
+
+.ch-container .pull-9 {
+  left: -720px;
+}
+
+.ch-container .pull-10 {
+  left: -800px;
+}
+
+.ch-container .pull-11 {
+  left: -880px;
+}
+
+/*
+单元格居中显示
+*/
+.ch-container .center-1{
+	left: 450px;
+	width: 60px;
+}
+.ch-container .center-2{
+	left: 410px;
+	width: 140px;
+}
+.ch-container .center-3{
+	left: 370px;
+	width:220px;
+}
+.ch-container .center-4{
+	left: 330px;
+	width:300;
+}
+.ch-container .center-5{
+	left: 290px;
+	width: 380px;
+}
+.ch-container .center-6{
+	left: 250px;
+	width: 460px;
+}
+.ch-container .center-7{
+	left: 210px;
+	width: 540px;
+}
+.ch-container .center-8{
+	left: 170px;
+	width: 620px;
+}
+.ch-container .center-9{
+	left: 130px;
+	width: 700px;
+}
+.ch-container .center-10{
+	left: 90px;
+	width: 780px;
+}
+.ch-container .center-11{
+	left: 50px;
+	width: 860px;
+}
+.ch-container  .center-12{
+	left: 10px;
+	width: 940px;
+}
+/*
+悬浮元素清除
+*/
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:before,
+.clearfix:after,
+.ch-container:before,
+.ch-container:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.ch-container:after {
+  clear: both;
+}
