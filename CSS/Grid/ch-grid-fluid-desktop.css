@@ -1,0 +1,494 @@
+/*
+按百分比来设置网格的宽度，属性命名说明：
+单元格命名：fluid-grid-num;
+左偏移：　fluid-pull-num;
+右偏移：　fluid-push-num;
+左边距：　fluid-prefix-num;
+右边距：　fluid-suffix-num;
+*/
+
+/*
+全局属性设置
+偏移属性，使用相对定位
+*/
+.fluid-container{
+	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 1200px;
+  	padding-left: 10px;
+  	padding-right: 10px;
+}
+
+.fluid-push-5, .fluid-pull-5,
+.fluid-push-10, .fluid-pull-10,
+.fluid-push-15, .fluid-pull-15,
+.fluid-push-20, .fluid-pull-20,
+.fluid-push-25, .fluid-pull-25,
+.fluid-push-30, .fluid-pull-30,
+.fluid-push-35, .fluid-pull-35,
+.fluid-push-40, .fluid-pull-40,
+.fluid-push-45, .fluid-pull-45,
+.fluid-push-50, .fluid-pull-50,
+.fluid-push-55, .fluid-pull-55,
+.fluid-push-60, .fluid-pull-60,
+.fluid-push-65, .fluid-pull-65,
+.fluid-push-70, .fluid-pull-70,
+.fluid-push-75, .fluid-pull-75,
+.fluid-push-80, .fluid-pull-80,
+.fluid-push-85, .fluid-pull-85,
+.fluid-push-90, .fluid-pull-90,
+.fluid-push-95, .fluid-pull-95,
+.fluid-push-33, .fluid-pull-33,
+.fluid-push-66, .fluid-pull-66{
+	position: relative;
+}
+
+/*悬浮属性清除及隐藏*/
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+/*补白设置*/
+.fluid-grid-5,
+.fluid-grid-10,
+.fluid-grid-15,
+.fluid-grid-20,
+.fluid-grid-25,
+.fluid-grid-30,
+.fluid-grid-35,
+.fluid-grid-40,
+.fluid-grid-45,
+.fluid-grid-50,
+.fluid-grid-55,
+.fluid-grid-60,
+.fluid-grid-65,
+.fluid-grid-70,
+.fluid-grid-75,
+.fluid-grid-80,
+.fluid-grid-85,
+.fluid-grid-90,
+.fluid-grid-95,
+.fluid-grid-100,
+.fluid-grid-33,
+.fluid-grid-66{
+	 -moz-box-sizing: border-box;
+ 	 -webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+  	padding-left: 10px;
+  	padding-right: 10px;
+}
+
+/*
+单元格百分比设置
+*/
+.fluid-grid-5{
+	float: left;
+	width: 5%;
+}
+
+.fluid-grid-10{
+	float: left;
+	width: 10%;
+}
+
+.fluid-grid-15{
+	float: left;
+	width: 15%;
+}
+
+.fluid-grid-20{
+	float: left;
+	width: 20%;
+}
+
+.fluid-grid-25{
+	float: left;
+	width: 25%;
+}
+
+.fluid-grid-30{
+	float: left;
+	width: 30%;
+}
+
+.fluid-grid-35{
+	float: left;
+	width: 35%;
+}
+
+.fluid-grid-40{
+	float: left;
+	width: 40%;
+}
+
+.fluid-grid-45{
+	float: left;
+	width: 45%;
+}
+
+.fluid-grid-50{
+	float: left;
+	width: 50%;
+}
+
+.fluid-grid-55{
+	float: left;
+	width: 55%;
+}
+
+.fluid-grid-60{
+	float: left;
+	width: 60%;
+}
+
+.fluid-grid-65{
+	float: left;
+	width: 65%;
+}
+
+.fluid-grid-70{
+	float: left;
+	width: 70%;
+}
+
+.fluid-grid-75{
+	float: left;
+	width: 75%;
+}
+
+.fluid-grid-80{
+	float: left;
+	width: 80%;
+}
+
+.fluid-grid-85{
+	float: left;
+	width: 85%;
+}
+
+.fluid-grid-90{
+	float: left;
+	width:90%;
+}
+
+.fluid-grid-95{
+	float: left;
+	width: 95%;
+}
+
+.fluid-grid-33{
+	float: left;
+	width: 33.33333%;
+}
+
+.fluid-grid-66{
+	float: left;
+	width: 66.66667%;
+}
+
+.fluid-grid-100{
+	clear:both;
+	width: 100%;
+}
+
+/*偏移属性设置*/
+/*5%*/
+.fluid-pull-5{
+	left: -5%;
+}
+.fluid-push-5{
+	left: 5%;
+}
+/*考虑内补是否能达到同样的效果*/
+.fluid-prefix-5{
+	margin-left: 5%;
+}
+.fluid-suffix-5{
+	margin-right:  5%;
+}
+
+/*10%*/
+.fluid-pull-10{
+	left: -10%;
+}
+.fluid-push-10{
+	left: 10%;
+}
+.fluid-prefix-10{
+	margin-left: 10%;
+}
+.fluid-suffix-10{
+	margin-right: 10%;
+}
+
+/*15%*/
+.fluid-pull-15{
+	left: -15%;
+}
+.fluid-push-15{
+	left: 15%;
+}
+.fluid-prefix-15{
+	margin-left: 15%;
+}
+.fluid-suffix-20{
+	margin-right: 20%;
+}
+
+/*20%*/
+.fluid-pull-20{
+	left: -20%;
+}
+.fluid-push-20{
+	left: 20%;
+}
+.fluid-prefix-20{
+	margin-left: 20%;
+}
+.fluid-suffix-20{
+	margin-right: 20%;
+}
+
+/*25%*/
+.fluid-pull-25{
+	left: -25%;
+}
+.fluid-push-25{
+	left: 25%;
+}
+.fluid-prefix-25{
+	margin-left: 25%;
+}
+.fluid-suffix-25{
+	margin-right: 25%;
+}
+
+/*30%*/
+.fluid-pull-30{
+	left: -30%;
+}
+.fluid-push-30{
+	left: 30%;
+}
+.fluid-prefix-30{
+	margin-left: 30%;
+}
+.fluid-suffix-30{
+	margin-right: 30%;
+}
+
+/*35%*/
+.fluid-pull-35{
+	left: -35%;
+}
+.fluid-push-35{
+	left: 35%;
+}
+.fluid-prefix-35{
+	margin-left: 35%;
+}
+.fluid-suffix-35{
+	margin-right: 35%;
+}
+
+/*40%*/
+.fluid-pull-40{
+	left: -40%;
+}
+.fluid-push-40{
+	left: 40%;
+}
+.fluid-prefix-40{
+	margin-left: 40%;
+}
+.fluid-suffix-40{
+	margin-right: 40%;
+}
+
+/*45%*/
+.fluid-pull-45{
+	left: -45%;
+}
+.fluid-push-45{
+	left: 45%;
+}
+.fluid-prefix-45{
+	margin-left: 45%;
+}
+.fluid-suffix-45{
+	margin-right: 45%;
+}
+
+/*50%*/
+.fluid-pull-50{
+	left: -50%;
+}
+.fluid-push-50{
+	left: 50%;
+}
+.fluid-prefix-50{
+	margin-left: 50%;
+}
+.fluid-suffix-50{
+	margin-right: 50%;
+}
+
+/*55%*/
+.fluid-pull-55{
+	left: -55%;
+}
+.fluid-push-55{
+	left: 55%;
+}
+.fluid-prefix-55{
+	margin-left: 55%;
+}
+.fluid-suffix-55{
+	margin-right: 55%;
+}
+
+/*60%*/
+.fluid-pull-60{
+	left: -60%;
+}
+.fluid-push-60{
+	left: 60%;
+}
+.fluid-prefix-60{
+	margin-left: 60%;
+}
+.fluid-suffix-60{
+	margin-right: 60%;
+}
+
+/*65%*/
+.fluid-pull-65{
+	left: -65%;
+}
+.fluid-push-65{
+	left: 65%;
+}
+.fluid-prefix-65{
+	margin-left: 65%;
+}
+.fluid-suffix-65{
+	margin-right: 65%;
+}
+
+/*70%*/
+.fluid-pull-70{
+	left: -70%;
+}
+.fluid-push-70{
+	left: 70%;
+}
+.fluid-prefix-70{
+	margin-left: 70%;
+}
+.fluid-suffix-70{
+	margin-right: 70%;
+}
+
+/*75%*/
+.fluid-pull-75{
+	left: -75%;
+}
+.fluid-push-75{
+	left: 75%;
+}
+.fluid-prefix-75{
+	margin-left: 75%;
+}
+.fluid-suffix-75{
+	margin-right: 75%;
+}
+
+/*80%*/
+.fluid-pull-80{
+	left: -80%;
+}
+.fluid-push-80{
+	left: 80%;
+}
+.fluid-prefix-80{
+	margin-left: 80%;
+}
+.fluid-suffix-80{
+	margin-right: 80%;
+}
+
+/*85%*/
+.fluid-pull-85{
+	left: -85%;
+}
+.fluid-push-85{
+	left: 85%;
+}
+.fluid-prefix-85{
+	margin-left: 85%;
+}
+.fluid-suffix-85{
+	margin-right: 85%;
+}
+
+/*90%*/
+.fluid-pull-90{
+	left: -90%;
+}
+.fluid-push-90{
+	left: 90%;
+}
+.fluid-prefix-90{
+	margin-left: 90%;
+}
+.fluid-suffix-90{
+	margin-right: 90%;
+}
+
+/*95%*/
+.fluid-pull-95{
+	left: -95%;
+}
+.fluid-push-95{
+	left: 95%;
+}
+.fluid-prefix-95{
+	margin-left: 95%;
+}
+.fluid-suffix-95{
+	margin-right: 95%;
+}
+
+/*33%*/
+.fluid-pull-33{
+	left: -33.333333%;
+}
+.fluid-push-33{
+	left: 33.333333%;
+}
+.fluid-prefix-33{
+	margin-left: 33.333333%;
+}
+.fluid-suffix-33{
+	margin-right: 33.333333%;
+}
+
+/*66%*/
+.fluid-pull-66{
+	left: -66.66667%;
+}
+.fluid-push-66{
+	left: 66.66667%;
+}
+.fluid-prefix-66{
+	margin-left: 66.66667%;
+}
+.fluid-suffix-66{
+	margin-right: 66.66667%;
+}
